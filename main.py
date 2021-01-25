@@ -103,10 +103,11 @@ if __name__ == '__main__':
 	# report
 	data = {
 		'ismoved': '0',
-		'dqjzzt': '1',  # 当前居住状态，0在校、1在京不在校
 		'jhfjrq': '',  # 计划返京日期
 		'jhfjjtgj': '',  # 计划返京交通工具
 		'jhfjhbcc': '',  # 计划返京航班车次
+		'sftjzgfxdq': '0', # 所在地风险等级
+		'dqszyqfxdj': '1', # 途径中高风险地区
 		'tw': str(random.randint(2, 3)),  # 体温范围所对应的页面上的序号（下标从 1 开始）
 		'sfcxtz': '0',  # 今日是否出现发热、乏力、干咳、呼吸困难等症状？
 		'sfjcbh': '0',  # 今日是否接触疑似/确诊人群？
@@ -155,17 +156,18 @@ if __name__ == '__main__':
 		'jcwhryfs': '',  # 接触武汉人员方式
 		'jchbryfs': '',  # 接触湖北人员方式
 		'szgj': '',  # 所在国家
+		'dzjzzt': '0', # ?
 		'jcjg': '',  # 检查结果
-		# --- The following are uncommented field --- #
+		# # --- The following are uncommented field --- #
 		'date': datetime.datetime.now().strftime('%Y%m%d'),
-		# 'uid': '0',
+	    # 'uid': uid,
 		'created': int(time.time()),
-		'jcqzrq': '',
-		'sfjcqz': '',
+		# 'jcqzrq': '',
+		# 'sfjcqz': '',
 		'szsqsfybl': 0,
-		'sfsqhzjkk': 0,
+		'sfsqhzjkk': '',
 		'sqhzjkkys': '',
-		'sfygtjzzfj': 0,
+		'sfygtjzzfj': '',
 		'gtjzzfjsj': '',
 		'ljrq': '',
 		'ljjtgj': '',
@@ -187,7 +189,10 @@ if __name__ == '__main__':
 		'gwszdd': '',
 		'sfyqjzgc': '',
 		'jrsfqzys': '',
-		'jrsfqzfy': ''
+		'jrsfqzfy': '',
+		'dqjzzt': '0',
+		'sfjcqz': '',
+		'jcqzrq': ''
 	}
 
 	go_on = True
